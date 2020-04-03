@@ -1,3 +1,10 @@
+/*
+Functional inheritance makes use of a factory function, and then tacks on new properties using 
+concatenative inheritance. The primary advantage of using functions for extension is that it 
+allows you to use the function closure to encapsulate private data. In other words, you can 
+enforce private state.
+*/
+
 const ridingBike = (state) => ({
     ride: (bike) => {
         console.log(`${state.name} is riding his ${bike}!`);
