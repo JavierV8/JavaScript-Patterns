@@ -11,17 +11,4 @@ class Vehicle {
         return `The make, model, and year are ${this.make} ${this.model} ${this.year}`;
     }
 }
-class Car extends Vehicle {
-    constructor() {
-        super(...arguments)
-        this.numWheels = 4;
-    }
-}
-class Motorcycle extends Vehicle {
-    constructor() {
-        super(...arguments)
-        this.numWheels = 2;
-    }
-}
-var MyCar = new Car();
-var MyMotorcycle = new Motorcycle();
+var MyCar = new Vehicle();
