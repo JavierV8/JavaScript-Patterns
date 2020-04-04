@@ -1,2 +1,2 @@
 # JavaScript-Patterns
-Most importante JavaScript patterns
+Object creation and Object Inheritance patterns in JavaScript
