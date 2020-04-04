@@ -1,18 +1,25 @@
 //This is the simplest and most popular way to create objects in JavaScript.
 
 const counter = {
-    name = name,
-    count = 0,
-    add = function (number) {
+    state: function (name) {
+        this.name = name;
+        this.count = 0;
+    },
+    add: function (number) {
         this.count += number;
     },
-    remove = function (number) {
+    remove: function (number) {
         this.count -= number;
     },
-    checkCount = function () {
+    checkCount: function () {
         return this.count;
     },
-    getName = function () {
+    getName: function () {
         return this.name;
     }
 };
+
+counter.state("George");
+console.log(counter.getName())  //George
+counter.add(2);
+console.log(counter.checkCount())  //2

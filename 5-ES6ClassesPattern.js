@@ -1,4 +1,3 @@
-
 class counter {
     constructor(name) {
         this.name = name
@@ -17,5 +16,8 @@ class counter {
         return this.name;
     }
 };
-var MyCounter = new counter('George');
-MyCounter.getName();
+
+const counter2 = new counter('George');
+console.log(counter2.getName())  //George
+counter2.add(2);
+console.log(counter2.checkCount())  //2

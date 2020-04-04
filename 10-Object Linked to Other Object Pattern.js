@@ -1,3 +1,51 @@
+const Vehicle = {
+    engeen: true,
+    init: function (brand, model, year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    },
+    start: function () {
+        return "VROOM!"
+    },
+    VehicleInfo: function () {
+        return `The brand, model, and year are ${this.brand} ${this.model} ${this.year}`;
+    }
+}/*
+Vehicle.prototype = {
+    start: function () {
+        return "VROOM!"
+    },
+    VehicleInfo: function () {
+        return `The brand, model, and year are ${this.brand} ${this.model} ${this.year}`;
+    }
+};*/
+
+var car = Vehicle.create({
+    numWheels: 4,
+    startRadio: function () {
+        return `you are listening the radio on your ${this.numWheels} wheels car`
+    }
+})
+var Motorcycle = Vehicle.create({
+    numWheels: 2,
+    makeWheelie: function () {
+        return `you are making a wheelie with your ${this.numWheels} wheels motorcycle!`
+    }
+})
+
+var MyCar = Car.create("volkswagen", "polo", "2018", 4);
+console.log(MyCar.VehicleInfo())
+console.log(MyCar.startRadio())
+
+var MyMotorcycle = new Motorcycle("Honda", "CBR600RR", "2019", 2);
+console.log(MyMotorcycle.VehicleInfo())
+console.log(MyMotorcycle.makeWheelie())
+
+
+
+
+//-----------------------------------------------------------------
 
 const human = {
     species: "human",
@@ -29,28 +77,3 @@ var will = musician.create({
 will.playInstrument(); // plays drums
 will.sayName(); //will
 
-
-const counter = {
-    name = name,
-    count = 0,
-    add = function (number) {
-        this.count += number;
-    },
-    remove = function (number) {
-        this.count -= number;
-    },
-    checkCount = function () {
-        return this.count;
-    },
-    getName = function () {
-        return this.name;
-    }
-};
-
-/*
-Object.create and constructor function both create a new object and bot set the __proto__ but
-in a different way.Object.create sets the __proto__ to be the one passed as the first parameter.
-The constructor function set the __proto__ to the type specified prototype (in the previous
-example MyClass1.prototype).The major difference is that Object.Create returns the new object
-while the constructor function return the constructor of the object or the object.
-*/

@@ -10,10 +10,10 @@ function, taking up valuable space. In a large program, this could prove
 extremely slow and wasteful.
 */
 const counter = (name) => {
-    const name = name;
-    const count = 0
     return {
-        add = function (number) {
+        name: name,
+        count: 0,
+        add: function (number) {
             this.count += number;
         },
         remove: function (number) {
@@ -27,5 +27,8 @@ const counter = (name) => {
         }
     }
 };
-var MyCounter = counter('George');
-MyCounter.getName();
+
+const counter2 = counter('George');
+console.log(counter2.getName())  //George
+counter2.add(2);
+console.log(counter2.checkCount())  //2
