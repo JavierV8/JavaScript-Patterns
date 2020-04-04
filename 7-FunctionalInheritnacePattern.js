@@ -3,6 +3,11 @@ Functional inheritance makes use of a factory function, and then tacks on new pr
 concatenative inheritance. The primary advantage of using functions for extension is that it 
 allows you to use the function closure to encapsulate private data. In other words, you can 
 enforce private state.
+
+Functional inheritance compone funciones a partir de factory functions creando un 
+nueva funcion con todas las propiedades usando concatenative inheritance.
+la herencia concatenada es la que posibilita la composicion de objetos en JavaScript, 
+más interesante.
 */
 
 const ridingBike = (state) => ({
