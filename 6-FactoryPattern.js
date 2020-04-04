@@ -10,20 +10,22 @@ function, taking up valuable space. In a large program, this could prove
 extremely slow and wasteful.
 */
 const counter = (name) => {
+    let state = {
+        name,
+        count: 0
+    }
     return {
-        name: name,
-        count: 0,
         add: function (number) {
-            this.count += number;
+            state.count += number;
         },
         remove: function (number) {
-            this.count -= number;
+            state.count -= number;
         },
         checkCount: function () {
-            return this.count;
+            return state.count;
         },
         getName: function () {
-            return this.name;
+            return state.name;
         }
     }
 };
