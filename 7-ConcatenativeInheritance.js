@@ -1,7 +1,6 @@
 /*
 Concatenative inheritance is the process of combining the properties of one or more 
 source objects into a new destination object without retaining a reference between the two objects. 
-Believe it or not, it is the most commonly used form of inheritance in JavaScript.
 
 One major drawback to delegation is that it’s not very good for storing state. If you try to store 
 state as objects or arrays, mutating any member of the object or array will mutate the member for 
