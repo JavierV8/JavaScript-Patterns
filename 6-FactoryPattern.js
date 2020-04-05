@@ -1,14 +1,19 @@
 /*
-Although the factory pattern is useful for creating like objects, it has two 
-major drawbacks. First, there is no way to check whether a given object was 
-created by a certain factory. We cannot, for example, say something like bender 
-instanceof makeRobot to find out how bender was created. Second, the factory 
-pattern does not share behaviors, rather, it simply creates new versions of a 
-behavior every time it is called and adds them to the object being created. 
-As a result, methods are repeated anew on every object created by the factory 
-function, taking up valuable space. In a large program, this could prove 
-extremely slow and wasteful.
+In JavaScript, any function can create an object. When that function is not a constructor or `class`, 
+is called factory function. they are simply functions that create objects, but thanks to the 
+advantage of closures, offer the ability to produce easily instances of objects without immersing 
+themselves in the complexities of classes. In JavaScript you can use factory instead of using 
+classes, since they are basically more simple than classes and easier to reason. 
+Advantages of Factory Functions:
+o	The properties and methods of a class object are public, when factory is used functions only the 
+    methods we expose are public, everything else is encapsulated.
+o	In JavaScript the this keyword works differently and using classes you have the problem If you 
+    lose the context of this for example, this loses the context in nested functions. Not only is it 
+    annoying during coding, but it is also a constant source of mistakes.
+o	The keyword new must be used when creating objects using classes, but it is not necessary when 
+    creating objects with factory functions.
 */
+
 const counter = (name) => {
     let state = {
         name,

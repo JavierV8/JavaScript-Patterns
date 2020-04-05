@@ -1,4 +1,7 @@
-//This is the simplest and most popular way to create objects in JavaScript.
+/*
+OBJECT LITERAL
+Is the simplest way to create objects in JavaScript.
+*/
 
 const counter = {
     state: function (name) {

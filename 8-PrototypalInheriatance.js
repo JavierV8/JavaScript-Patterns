@@ -3,12 +3,6 @@ function Vehicle(brand, model, year) {
     this.brand = brand;
     this.model = model;
     this.year = year;
-    /*start = () => {
-        return "VROOM!"
-    }
-    VehicleInfo = () => {
-        return `The brand, model, and year are ${this.brand} ${this.model} ${this.year}`;
-    }*/
 }
 Vehicle.prototype = {
     start: function () {
