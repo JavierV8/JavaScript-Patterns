@@ -1,2 +1,2 @@
 # JavaScript-Patterns
-Object creation and Object Inheritance patterns in JavaScript
+These are 7 ways of creating JavaScript objects that I have documented through research
