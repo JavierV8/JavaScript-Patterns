@@ -74,7 +74,7 @@ const pilot = (name) => {
         name,
         oil: 100
     }
-    return Object.assign(state, canCast(state));
+    return Object.assign(state, drivingCar(state));
 }
 
 const indurain = cyclist('Miguel Indurain')

@@ -33,7 +33,6 @@ function Vehicle(brand, model, year) {
     this.brand = brand;
     this.model = model;
     this.year = year;
-    this.count = 0
 }
 Vehicle.prototype = {
     start: function () {
@@ -41,13 +40,7 @@ Vehicle.prototype = {
     },
     VehicleInfo: function () {
         return `The brand, model, and year are ${this.brand} ${this.model} ${this.year}`;
-    },
-    add: function (number) {
-        this.count += number;
-    },
-    checkCount: function () {
-        return this.count;
-    },
+    }
 };
 
 function Car(brand, model, year) {
@@ -74,9 +67,5 @@ console.log(MyCar.VehicleInfo())
 console.log(MyCar.startRadio())
 
 var MyMotorcycle = new Motorcycle("Honda", "CBR600RR", "2019", 2);
-console.log(MyMotorcycle.VehicleInfo())
-console.log(MyMotorcycle.makeWheelie())
-
-MyCar.add(2)
-console.log(MyCar.checkCount())
-console.log(MyMotorcycle.checkCount())
+console.log(MyMotorcycle.VehicleInfo());
+console.log(MyMotorcycle.makeWheelie());
