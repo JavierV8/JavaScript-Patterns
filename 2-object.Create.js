@@ -3,6 +3,7 @@ OBJECT.CREATE PATTERN
 Object.create() is a JavaScript method that allow to create a new object with the prototype set from
 other object.
 */
+
 const counter = {
     state: function (name) {
         this.name = name;
@@ -29,13 +30,19 @@ counter2.add(2);
 console.log(counter2.checkCount())  //2
 
 
-//---------------
+/*
+Now in this example a create funcion inside the vehicule Object gives the avility to inherit properties from this Object.
+when the function is call takes an object as an argument and it create a brand new object with the proprties of the object passed and the 
+prototype set from the vheicule object. Is a way to use Prototypal delegation.
+*/
 
 const Vehicle = {
+    count: 1,
     init: function (brand, model, year) {
         this.brand = brand;
         this.model = model;
         this.year = year;
+        //this.count = 0;
     },
     create: function (values) {
         var instance = Object.create(this);
@@ -49,7 +56,13 @@ const Vehicle = {
     },
     VehicleInfo: function () {
         return `The brand, model, and year are ${this.brand} ${this.model} ${this.year}`;
-    }
+    },
+    add: function (number) {
+        this.count += number;
+    },
+    checkCount: function () {
+        return this.count;
+    },
 }
 
 var car = Vehicle.create({
@@ -65,6 +78,7 @@ var Motorcycle = Vehicle.create({
     }
 })
 
+
 var MyCar = car.create({});
 MyCar.init("volkswagen", "polo", "2018")
 console.log(MyCar.VehicleInfo())
@@ -74,3 +88,7 @@ var MyMotorcycle = Motorcycle.create({});
 MyMotorcycle.init("Honda", "CBR600RR", "2019")
 console.log(MyMotorcycle.VehicleInfo())
 console.log(MyMotorcycle.makeWheelie())
+
+MyCar.add(1);
+console.log(MyCar.checkCount())
+console.log(MyMotorcycle.checkCount())

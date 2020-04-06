@@ -41,12 +41,11 @@ counter2.add(2);
 console.log(counter2.checkCount())  //2
 
 
-///-------------------------------------------
-
 /*
-Functional inheritance gives the possibility to combine 2 or more function into a new one using 
-concatenative inheritance. The main advantage of using function inheritance for extends functionality 
-is that it allows you to use the function closure to encapsulate private data.
+Concatenative inheritance is very powerful, but it gets even better when you combine it with closures. 
+Factory functions gives the possibility to combine 2 or more function into a new one using 
+concatenative inheritance. The main advantage of using factory functions for extends functionality 
+is that it allows you to use closures to encapsulate private data.
 */
 
 const ridingBike = (state) => ({

@@ -4,6 +4,7 @@ syntactic sugar, JavaScript is dynamic and does not provide a class implementati
 JavaScript classes remains on prototype delegation. So, this syntax was introduces to make the code 
 more simpler and understandable.
 */
+
 class counter {
     constructor(name) {
         this.name = name
@@ -29,7 +30,9 @@ counter2.add(2);
 console.log(counter2.checkCount())  //2
 
 
-//-------------------------------------------------
+/*
+With the keyword extends classes can inherit from other classes
+*/
 
 class Vehicle {
     constructor(make, model, year) {
